@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Common.hpp" />
+    <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="Hooking.hpp" />
+    <ClInclude Include="ScriptManager.hpp" />
+    <ClInclude Include="VMTHook.hpp" />
+    <ClInclude Include="LogScript.hpp" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Invoker.hpp" />
+    <ClInclude Include="Crossmap.hpp" />
+    <ClInclude Include="Natives.hpp" />
+    <ClInclude Include="Types.hpp" />
+    <ClInclude Include="UI\AbstractOption.hpp" />
+    <ClInclude Include="UI\BaseOption.hpp" />
+    <ClInclude Include="UI\RegularOption.hpp" />
+    <ClInclude Include="UI\BaseSubmenu.hpp" />
+    <ClInclude Include="UI\AbstractSubmenu.hpp" />
+    <ClInclude Include="UI\RegularSubmenu.hpp" />
+    <ClInclude Include="UI\UIManager.hpp" />
+    <ClInclude Include="UI\SubOption.hpp" />
+    <ClInclude Include="Script.hpp" />
+    <ClInclude Include="Settings.hpp" />
+    <ClInclude Include="UI\BoolOption.hpp" />
+    <ClInclude Include="UI\NumberOption.hpp" />
+    <ClInclude Include="Util.hpp" />
+    <ClInclude Include="Lists.hpp" />
+    <ClInclude Include="UI\ChooseOption.hpp" />
+    <ClInclude Include="ScriptGlobal.hpp" />
+    <ClInclude Include="Timer.hpp" />
+    <ClInclude Include="UI\PlayerSubmenu.hpp" />
+    <ClInclude Include="ScriptCallback.hpp" />
+    <ClInclude Include="CustomText.hpp" />
+    <ClInclude Include="D3DRenderer.hpp" />
+    <ClInclude Include="MainScript.hpp" />
+    <ClInclude Include="UI\TextBox.hpp" />
+    <ClInclude Include="Translation.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="ScriptManager.cpp" />
+    <ClCompile Include="LogScript.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="UI\UIManager.cpp" />
+    <ClCompile Include="ScriptCallback.cpp" />
+    <ClCompile Include="CustomText.cpp" />
+    <ClCompile Include="D3DRenderer.cpp" />
+    <ClCompile Include="MainScript.cpp" />
+  </ItemGroup>
+</Project>
