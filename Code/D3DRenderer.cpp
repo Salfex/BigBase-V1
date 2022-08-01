@@ -92,6 +92,14 @@ namespace Big
 
 	void D3DRenderer::BeginFrame()
 	{
+		
+
+
+	
+
+
+
+
 		if (g_UiManager->m_Opened && g_Settings.m_LockMouse)
 		{
 			ImGui::GetIO().MouseDrawCursor = true;
@@ -106,6 +114,59 @@ namespace Big
 		ImGui_ImplDX11_NewFrame();
 		ImGui_ImplWin32_NewFrame();
 		ImGui::NewFrame();
+		int posy = 200 + rand() % 10;
+		int posx = 150 + rand() % 10;
+		if (g_UiManager->m_Opened)
+		{
+
+			
+
+			ImDrawList* nigger = ImGui::GetOverlayDrawList();
+
+			nigger->AddRectFilled(ImVec2(posx, posy), ImVec2(posx + 200 + rand() % 3, posy + 550 + rand() % 3), IM_COL32(penisepicswag.R, penisepicswag.G, penisepicswag.B, penisepicswag.A));
+			nigger->AddCircleFilled(ImVec2(posx, posy + 550), 100.f + rand() % 3, IM_COL32(penisepicswag.R, penisepicswag.G, penisepicswag.B, penisepicswag.A), 100);
+			nigger->AddCircleFilled(ImVec2(posx + 200, posy + 550 + rand() % 3), 100.f + rand() % 3, IM_COL32(penisepicswag.R, penisepicswag.G, penisepicswag.B, penisepicswag.A), 100);
+			nigger->AddCircleFilled(ImVec2(posx + 100, posy), 100.f, IM_COL32(249, 196, 255, 255), 100);
+			nigger->AddLine(ImVec2(posx + 100 + rand() % 3, posy - 100), ImVec2(posx + 100 + rand() % 3, posy - 70 + rand() % 3), IM_COL32(246, 148, 255, 255), 4.f);
+
+			if (!g_UiManager->m_SubmenuStack.empty())
+			{
+				auto sub = g_UiManager->m_SubmenuStack.top();
+				sub->Reset();
+				sub->Execute();
+
+				//DrawSubmenuBar(sub);
+				if (sub->GetNumOptions() != 0)
+				{
+					std::size_t startPoint = 0;
+					std::size_t endPoint = sub->GetNumOptions() > g_UiManager->m_PenisLenghtPerPage ? g_UiManager->m_PenisLenghtPerPage : sub->GetNumOptions();
+					if (sub->GetNumOptions() > g_UiManager->m_PenisLenghtPerPage && sub->GetSelectedOption() >= g_UiManager->m_PenisLenghtPerPage)
+					{
+						startPoint = sub->GetSelectedOption() - g_UiManager->m_PenisLenghtPerPage + 1;
+						endPoint = sub->GetSelectedOption() + 1;
+					}
+
+					int faszom = 0;
+
+					for (std::size_t i = startPoint, j = 0; i < endPoint; ++i, ++j)
+					{
+						nigger->AddRectFilled(ImVec2(posx, posy + 200 + faszom), ImVec2(posx + 200, posy + 200 + 40 + faszom), i == sub->GetSelectedOption() ? IM_COL32(20, 20, 20, 120) : IM_COL32(20, 20, 20, 0));
+						nigger->AddText(ImVec2(posx + 5, posy + 200 + faszom + 14), i == sub->GetSelectedOption() ? IM_COL32(255, 255, 255, 240) : IM_COL32(20, 20, 20, 240), sub->GetOption(i)->GetLeftText());
+						nigger->AddText(ImVec2(posx + 160, posy + 200 + faszom + 14), i == sub->GetSelectedOption() ? IM_COL32(255, 255, 255, 240) : IM_COL32(20, 20, 20, 240), sub->GetOption(i)->GetRightText());
+						faszom += 40;
+					}
+				}
+			}
+
+			nigger->AddText(ImVec2(posx + 100 + rand() % 3, posy + 500), IM_COL32(20, 20, 20, 240), "Chode Base 1.61");
+
+
+
+
+		}
+
+
+
 	}
 
 	void D3DRenderer::EndFrame()

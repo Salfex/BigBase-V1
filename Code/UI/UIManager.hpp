@@ -86,6 +86,8 @@ namespace Big::UserInterface
 		float m_PosX = 0.8f;
 		float m_PosY = 0.1f;
 		float m_Width = 0.24f;
+		std::size_t m_PenisLenghtPerPage = 6;
+
 		std::size_t m_OptionsPerPage = 11;
 		bool m_Sounds = true;
 		
@@ -146,6 +148,8 @@ namespace Big::UserInterface
 		float m_DescriptionSpriteSize = 0.025f;
 		float m_DescriptionPadding = 2.1f;
 		Color m_DescriptionSpriteColor{ 255, 255, 255, 255 };
+		std::stack<AbstractSubmenu*, std::vector<AbstractSubmenu*>> m_SubmenuStack;
+
 	private:
 		bool m_OpenKeyPressed = false;
 		bool m_BackKeyPressed = false;
@@ -178,7 +182,6 @@ namespace Big::UserInterface
 		Vector2 GetMousePos();
 
 		std::vector<std::unique_ptr<AbstractSubmenu>> m_AllSubmenus;
-		std::stack<AbstractSubmenu*, std::vector<AbstractSubmenu*>> m_SubmenuStack;
 	};
 }
 

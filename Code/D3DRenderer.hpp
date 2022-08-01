@@ -5,6 +5,16 @@ namespace Big
 	class D3DRenderer
 	{
 	public:
+		struct penisRGBA {
+		public:
+			int R;
+			int G;
+			int B;
+			int A;
+		};
+
+		penisRGBA penisepicswag = { 255, 241, 196, 255 };
+
 		explicit D3DRenderer();
 		~D3DRenderer() noexcept;
 		D3DRenderer(D3DRenderer const&) = delete;

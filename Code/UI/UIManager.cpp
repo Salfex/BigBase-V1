@@ -10,10 +10,10 @@ namespace Big::UserInterface
 
 		if (IsMouseLocked())
 		{
-			PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
+			//PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
 			ShowCursor(true);
 			SetCursor(LoadCursorA(NULL, IDC_ARROW));
-		
+
 			if (GetMenuRect().IsInBounds(GetMousePos()))
 			{
 				g_Logger->Info("Kekkeke");
@@ -22,7 +22,7 @@ namespace Big::UserInterface
 
 		if (g_UiManager->m_Opened && g_Settings.m_LockMouse)
 		{
-			PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
+			//PAD::DISABLE_ALL_CONTROL_ACTIONS(0);
 		}
 
 		CheckForInput();
@@ -30,9 +30,9 @@ namespace Big::UserInterface
 
 		if (m_Opened)
 		{
-			PAD::DISABLE_CONTROL_ACTION(0, 27, true); // Disable phone
+			//PAD::DISABLE_CONTROL_ACTION(0, 27, true); // Disable phone
 
-			m_DrawBaseY = m_PosY;
+			/*m_DrawBaseY = m_PosY;
 			DrawHeader();
 			if (!m_SubmenuStack.empty())
 			{
@@ -59,7 +59,7 @@ namespace Big::UserInterface
 			}
 
 			DrawFooter();
-			DrawDescription();
+			DrawDescription();*/
 		}
 	}
 
@@ -67,7 +67,7 @@ namespace Big::UserInterface
 	{
 		ResetInput();
 
-		m_OpenKeyPressed = IsKeyPressed(VK_MULTIPLY);
+		m_OpenKeyPressed = IsKeyPressed(VK_F8);
 		m_BackKeyPressed = IsKeyPressed(VK_BACK);
 		m_EnterKeyPressed = IsKeyPressed(VK_RETURN);
 		m_UpKeyPressed = IsKeyPressed(VK_UP);
@@ -84,8 +84,8 @@ namespace Big::UserInterface
 			openTicker = GetTickCount();
 			m_Opened ^= true;
 
-			if (m_Sounds)
-				AUDIO::PLAY_SOUND_FRONTEND(-1, m_Opened ? "SELECT" : "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+			//if (m_Sounds)
+				//AUDIO::PLAY_SOUND_FRONTEND(-1, m_Opened ? "SELECT" : "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 		}
 
 		static Timer backTimer(0ms);
@@ -93,18 +93,18 @@ namespace Big::UserInterface
 		if (m_Opened && m_BackKeyPressed && backTimer.Update())
 		{
 			if (m_Sounds)
-				AUDIO::PLAY_SOUND_FRONTEND(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//AUDIO::PLAY_SOUND_FRONTEND(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
-			if (m_SubmenuStack.size() <= 1)
-			{
-				m_Opened = false;
-			}
-			else
-			{
-				m_SubmenuStack.pop();
-			}
+				if (m_SubmenuStack.size() <= 1)
+				{
+					m_Opened = false;
+				}
+				else
+				{
+					m_SubmenuStack.pop();
+				}
 		}
-		
+
 		if (m_Opened && !m_SubmenuStack.empty())
 		{
 			auto sub = m_SubmenuStack.top();
@@ -113,8 +113,8 @@ namespace Big::UserInterface
 			enterTimer.SetDelay(std::chrono::milliseconds(m_EnterDelay));
 			if (m_EnterKeyPressed && sub->GetNumOptions() != 0 && enterTimer.Update())
 			{
-				if (m_Sounds)
-					AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//if (m_Sounds)
+					//AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
 				if (auto opt = sub->GetOption(sub->GetSelectedOption()))
 				{
@@ -126,8 +126,8 @@ namespace Big::UserInterface
 			upTimer.SetDelay(std::chrono::milliseconds(m_VerticalDelay));
 			if (m_UpKeyPressed && sub->GetNumOptions() != 0 && upTimer.Update())
 			{
-				if (m_Sounds)
-					AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//if (m_Sounds)
+					//AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
 				sub->ScrollBackward();
 			}
@@ -136,8 +136,8 @@ namespace Big::UserInterface
 			downTimer.SetDelay(std::chrono::milliseconds(m_VerticalDelay));
 			if (m_DownKeyPressed && sub->GetNumOptions() != 0 && downTimer.Update())
 			{
-				if (m_Sounds)
-					AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//if (m_Sounds)
+					//AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
 				sub->ScrollForward();
 			}
@@ -146,8 +146,8 @@ namespace Big::UserInterface
 			leftTimer.SetDelay(std::chrono::milliseconds(m_HorizontalDelay));
 			if (m_LeftKeyPressed && sub->GetNumOptions() != 0 && leftTimer.Update())
 			{
-				if (m_Sounds)
-					AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//if (m_Sounds)
+					//AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
 				if (auto opt = sub->GetOption(sub->GetSelectedOption()))
 				{
@@ -159,8 +159,8 @@ namespace Big::UserInterface
 			rightTimer.SetDelay(std::chrono::milliseconds(m_HorizontalDelay));
 			if (m_RightKeyPressed && sub->GetNumOptions() != 0 && rightTimer.Update())
 			{
-				if (m_Sounds)
-					AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+				//if (m_Sounds)
+					//AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
 
 				if (auto opt = sub->GetOption(sub->GetSelectedOption()))
 				{
@@ -314,7 +314,7 @@ namespace Big::UserInterface
 			m_Width,
 			m_FooterHeight,
 			m_FooterBackgroundColor);
-		
+
 		float size = m_FooterSpriteSize;
 		float rotation = 0.f;
 		const char* texture = "shop_arrows_upanddown";
@@ -405,24 +405,24 @@ namespace Big::UserInterface
 
 	void UIManager::DrawRect(float x, float y, float width, float height, Color color)
 	{
-		GRAPHICS::DRAW_RECT(x, y, width, height, color.r, color.g, color.b, color.a, 0);
+		//GRAPHICS::DRAW_RECT(x, y, width, height, color.r, color.g, color.b, color.a, 0);
 	}
 
 	void UIManager::DrawSprite(const char* dict, const char* texture, float x, float y, float width, float height, Color color, float rotation)
 	{
-		if (GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED(dict))
-		{
-			GRAPHICS::DRAW_SPRITE(dict, texture, x, y, width, height, rotation, color.r, color.g, color.b, color.a, 0);
-		}
-		else
-		{
-			GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT(dict, false);
-		}
+		//if (GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED(dict))
+		//{
+			//GRAPHICS::DRAW_SPRITE(dict, texture, x, y, width, height, rotation, color.r, color.g, color.b, color.a, 0);
+		//}
+		//else
+		//{
+			//GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT(dict, false);
+		//}
 	}
 
 	void UIManager::DrawLeftText(const char* text, float x, float y, float size, Font font, Color color, bool outline, bool shadow)
 	{
-		HUD::SET_TEXT_SCALE(size, size);
+		/*HUD::SET_TEXT_SCALE(size, size);
 		HUD::SET_TEXT_FONT(static_cast<int>(font));
 		HUD::SET_TEXT_COLOUR(color.r, color.g, color.b, color.a);
 		if (outline)
@@ -432,25 +432,25 @@ namespace Big::UserInterface
 
 		HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(text);
-		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(x, y, 0);
+		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(x, y, 0);*/
 	}
 
 	void UIManager::DrawCenteredText(const char* text, float x, float y, float size, Font font, Color color, bool outline, bool shadow)
 	{
-		HUD::SET_TEXT_CENTRE(true);
-		DrawLeftText(text, x, y, size, font, color, outline, shadow);
+		//HUD::SET_TEXT_CENTRE(true);
+		//DrawLeftText(text, x, y, size, font, color, outline, shadow);
 	}
 
 	void UIManager::DrawRightText(const char* text, float x, float y, float size, Font font, Color color, bool outline, bool shadow)
 	{
-		HUD::SET_TEXT_WRAP(0.f, x);
-		HUD::SET_TEXT_RIGHT_JUSTIFY(true);
-		DrawLeftText(text, x, y, size, font, color, outline, shadow);
+		//HUD::SET_TEXT_WRAP(0.f, x);
+		//HUD::SET_TEXT_RIGHT_JUSTIFY(true);
+		//DrawLeftText(text, x, y, size, font, color, outline, shadow);
 	}
 
 	float UIManager::GetTextHeight(Font font, float size)
 	{
-		return HUD::_GET_TEXT_SCALE_HEIGHT(size, static_cast<int>(font));
+		return 1;
 	}
 
 	Vector2 UIManager::GetSpriteScale(float size)
@@ -474,7 +474,7 @@ namespace Big::UserInterface
 
 		if (!m_SubmenuStack.empty())
 		{
-			height += m_OptionHeight * std::min(m_SubmenuStack.top()->GetNumOptions(), m_OptionsPerPage);
+			height += m_OptionHeight * 1;
 		}
 
 		height += m_FooterHeight;

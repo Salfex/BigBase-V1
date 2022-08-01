@@ -46,7 +46,7 @@
 #define BIGBASE_STRINGIZE_IMPL(x) #x
 #define BIGBASE_STRINGIZE(x) BIGBASE_STRINGIZE_IMPL(x)
 
-#define BIGBASE_NAME "BigBase"
+#define BIGBASE_NAME "Chode Base"
 
 namespace Big
 {
@@ -59,6 +59,7 @@ namespace Big
 	inline std::uint32_t g_SelectedPlayer{};
 
 	inline bool g_LogScriptEvents = false;
+	inline bool g_BBCMODE = false;
 }
 
 #include "Settings.hpp"

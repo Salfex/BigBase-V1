@@ -1,0 +1,47 @@
+﻿  MainScript.cpp
+  UIManager.cpp
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(406,78): warning C4100: 'color': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(406,64): warning C4100: 'height': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(406,51): warning C4100: 'width': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(406,42): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(406,33): warning C4100: 'x': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,132): warning C4100: 'rotation': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,119): warning C4100: 'color': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,105): warning C4100: 'height': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,92): warning C4100: 'width': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,83): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,74): warning C4100: 'x': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,59): warning C4100: 'texture': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(411,41): warning C4100: 'dict': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,122): warning C4100: 'shadow': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,108): warning C4100: 'outline': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,96): warning C4100: 'color': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,84): warning C4100: 'font': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,73): warning C4100: 'size': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,64): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,55): warning C4100: 'x': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(423,43): warning C4100: 'text': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,126): warning C4100: 'shadow': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,112): warning C4100: 'outline': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,100): warning C4100: 'color': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,88): warning C4100: 'font': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,77): warning C4100: 'size': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,68): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,59): warning C4100: 'x': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(438,47): warning C4100: 'text': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,123): warning C4100: 'shadow': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,109): warning C4100: 'outline': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,97): warning C4100: 'color': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,85): warning C4100: 'font': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,74): warning C4100: 'size': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,65): warning C4100: 'y': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,56): warning C4100: 'x': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(444,44): warning C4100: 'text': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(451,50): warning C4100: 'size': unreferenced formal parameter
+C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Code\UI\UIManager.cpp(451,38): warning C4100: 'font': unreferenced formal parameter
+  Generating code
+  0 of 5352 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  BigBase.vcxproj -> C:\Users\Bailey Clark\Documents\GitHub\Chode-Base\Binaries\Release\BigBase.dll

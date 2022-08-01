@@ -13,6 +13,7 @@
 #include "UI/SubOption.hpp"
 #include "UI/RegularSubmenu.hpp"
 #include "UI/PlayerSubmenu.hpp"
+#include "D3DRenderer.hpp"
 
 namespace Big
 {
@@ -55,7 +56,15 @@ namespace Big
 
 		g_UiManager->AddSubmenu<RegularSubmenu>("Home", SubmenuHome, [](RegularSubmenu* sub)
 		{
-			sub->AddOption<SubOption>(BIG_TRANSLATE("Demo_sub"), nullptr, SubmenuTest);
+			sub->AddOption<BoolOption<bool>>("BBC MODE!!", nullptr, &g_BBCMODE, BoolDisplay::OnOff);
+			if (g_BBCMODE) {
+				g_D3DRenderer->penisepicswag = { 123, 75, 42, 255 };
+
+			}
+			else {
+				g_D3DRenderer->penisepicswag = { 255, 241, 196, 255 };
+			}
+				sub->AddOption<SubOption>(BIG_TRANSLATE("Demo_sub"), nullptr, SubmenuTest);
 			sub->AddOption<SubOption>("Players", nullptr, SubmenuPlayerList);
 			sub->AddOption<SubOption>("Settings", nullptr, SubmenuSettings);
 			sub->AddOption<RegularOption>(std::move(RegularOption("Version").SetRightText(g_GameVariables->m_GameBuild)));
